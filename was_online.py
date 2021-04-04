@@ -47,7 +47,7 @@ def start(message):
         # subroc_result = ansi_escape.sub('', subroc_result)
 
         date_and_time = datetime.datetime.today()
-        subroc_result= '\n\n\n' + date_and_time.strftime("%c") + '\n\n' + subroc_result
+        subroc_result = '\n\n\n' + date_and_time.strftime("%c") + '\n\n' + subroc_result
         bot.send_message(message.from_user.id, subroc_result)
         f = open("Bot/log", "a")
         f.write(subroc_result)
